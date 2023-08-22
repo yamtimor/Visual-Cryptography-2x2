@@ -20,5 +20,5 @@ if __name__ == "__main__":
 
     image_path = r"C:\Users\yamti\PycharmProjects\Visual-Cryptography-2x2\images"
 
-    # create_image(r"Yam Timor Trio", image_path)
+    create_image(r"Yam Timor Trio", image_path)
     main(image_path + "\\" + "new_image.png")

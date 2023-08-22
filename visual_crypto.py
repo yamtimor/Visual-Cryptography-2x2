@@ -6,7 +6,8 @@ def generate_shares(image_path):
         width, height = original_image.size
 
         # Create two empty shares
-        share1 = Image.new("1", (width, height))
+        share1 = Image.new(
+            "1", (width, height))
         share2 = Image.new("1", (width, height))
 
         # Iterate through each pixel in the original image
