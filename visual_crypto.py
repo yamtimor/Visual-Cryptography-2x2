@@ -2,8 +2,8 @@ from PIL import Image
 import random
 
 def generate_shares(image_path):
-    with open(image_path) as OrginialImage:
-        width, height = OrginialImage.size
+    with Image.open(image_path) as original_image:
+        width, height = original_image.size
 
         # Create two empty shares
         share1 = Image.new("1", (width, height))
@@ -12,7 +12,7 @@ def generate_shares(image_path):
         # Iterate through each pixel in the original image
         for x in range(width):
             for y in range(height):
-                pixel = OrginialImage.getpixel((x, y))
+                pixel = original_image.getpixel((x, y))
                 pattern = random.choice([0, 1])
                 if pixel == 0:  # Black pixel
                     share1.putpixel((x, y), pattern)

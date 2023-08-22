@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 
 
-def create_image(text, width=300, height=100, font_path="arial.ttf"):
+def create_image(text, path, width=300, height=100, font_path="arial.ttf"):
     image = Image.new('1', (width, height), 'white')
     draw = ImageDraw.Draw(image)
 
@@ -13,5 +13,5 @@ def create_image(text, width=300, height=100, font_path="arial.ttf"):
     position = ((width - text_width) / 2, (height - text_height) / 2)
 
     draw.text(position, text, fill="black", font=font)
-    image.save('new_image.png')
+    image.save(path+ "\\" + "new_image.png")
 
