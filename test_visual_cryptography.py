@@ -1,5 +1,5 @@
-from PIL import ImageChops
-
+from PIL import ImageChops, Image
+from visual_crypto import generate_shares
 
 def overlay_shares(share1, share2):
     return ImageChops.multiply(share1, share2)
@@ -17,7 +17,3 @@ def test_visual_cryptography(image_path):
         print("Test passed: The shares correctly recreate the original image.")
     else:
         print("Test failed: The shares do not recreate the original image.")
-
-
-# Test the code with your image path
-test_visual_cryptography('path/to/your/image.png')
