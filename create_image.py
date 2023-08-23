@@ -1,12 +1,12 @@
 from PIL import Image, ImageDraw, ImageFont
 
 
-def create_image(text, path, width=900, height=300, font_path="arial.ttf"):
+def create_image(text, path, width=900, height=900, font_path="arial.ttf"):
     image = Image.new('1', (width, height), 'white')
     draw = ImageDraw.Draw(image)
 
     # Change font size if needed
-    font = ImageFont.truetype(font_path, size=100)
+    font = ImageFont.truetype(font_path, size=800)
 
     # Center the text
     text_width, text_height = draw.textsize(text, font=font)
